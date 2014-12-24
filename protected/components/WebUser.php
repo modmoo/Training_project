@@ -7,25 +7,27 @@ class WebUser extends CWebUser {
     function isAdmin() {
         $user = $this->getState("roles");
         if ($user)
-            return $user == LevelLookUp::ADMIN;
+            return $user == LevelLookUp::ADMINISTRATOR;
         return false;
     }
-
+    function getdepartments() {
+        return $this->getState("departments");
+    }
     function getrole() {
         return $this->getState("roles");
     }
 
-    function isMEMBER() {
+    function isLEADER() {
         $role = $this->getState("roles");
         if ($role)
-            return $role == LevelLookUp::MEMBER;
+            return $role == LevelLookUp::LEADER;
         return false;
     }
 
-    function isCOMPANY() {
+    function isEMPLOYEE() {
         $role = $this->getState("roles");
         if ($role)
-            return $role == LevelLookUp::COMPANY;
+            return $role == LevelLookUp::EMPLOYEE;
         return false;
     }
 

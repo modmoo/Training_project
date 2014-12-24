@@ -1,13 +1,5 @@
 <?php
-
-/**
- * This is the model class for table "type_user".
- *
- * The followings are the available columns in table 'type_user':
- * @property integer $id
- * @property string $idtype
- * @property string $typename
- */
+ 
 class TypeUser extends CActiveRecord
 {
 	/**
@@ -17,10 +9,7 @@ class TypeUser extends CActiveRecord
 	{
 		return 'type_user';
 	}
-
-	/**
-	 * @return array validation rules for model attributes.
-	 */
+ 
 	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
@@ -81,6 +70,22 @@ class TypeUser extends CActiveRecord
                                     $this->isNewRecord = true;   
                             }
                     }
+    public static function getlabelusertype($id){
+      $criteria = new CDbCriteria ();
+        $criteria->select = array(
+            '*'
+        );
+       //$criteria->condition = 'active=:active';
+        $criteria->condition = 'id=:id';
+        $criteria->params = array(
+            ':id' => $id
+        );
+        // $criteria->params = array(':category'=>1);
+       // $criteria->order = 'start DESC '; // uncomment to order the list
+      //  $criteria->limit =4;
+       $mylist= self::model()->model()->find($criteria);
+       return  $mylist->typename;
+   }                    
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);

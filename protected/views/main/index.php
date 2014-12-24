@@ -13,29 +13,29 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="<?= Yii::app()->baseUrl; ?>/images/uploads/woman-219927_640.jpg" style="height:300px;" alt="First slide">
+                                <img src="<?= Yii::app()->baseUrl; ?>/images/uploads/slide/k001.jpg" style="height:300px;" alt="First slide">
                                 <div class="container">
                                     <div class="carousel-caption">
-                                        <h1>Example headline.</h1>
-                                        sfsgdgf
+                                        <h1>กิจกรรมอบรมการเขียนโปรแกรม JAVA.</h1>
+                                       ณ. จังหวัดมุกดาหาร
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="<?= Yii::app()->baseUrl; ?>/images/uploads/woman-219927_640.jpg" style="height:300px;" alt="Second slide">
+                                <img src="<?= Yii::app()->baseUrl; ?>/images/uploads/slide/k002.jpg" style="height:300px;" alt="Second slide">
                                 <div class="container">
                                     <div class="carousel-caption">
-                                        <h1>Another example headline.</h1>
-                                        dfsfsdf
+                                        <h1>กิจกรรมอบรมการเขียนโปรแกรม PHP </h1>
+                                         ณ. จังหวัดมุกดาหาร
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
-                                <img src="<?= Yii::app()->baseUrl; ?>/images/uploads/woman-219927_640.jpg" style="height:300px;" alt="Third slide">
+                                <img src="<?= Yii::app()->baseUrl; ?>/images/uploads/slide/k003.jpg" style="height:300px;" alt="Third slide">
                                 <div class="container">
                                     <div class="carousel-caption">
-                                        <h1>One more for good measure.</h1>
-
+                                        <h1>กิจกรรมอบรมการเขียนโปรแกรม JAVSCRIPT .</h1>
+                                            ณ. จังหวัดมุกดาหาร
                                     </div>
                                 </div>
                             </div>
@@ -46,20 +46,14 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div id="box_new_course">
-                                <?php
-                                $i = 0;
-                                foreach ($course as $key => $valuecourse) {
-                                    $i++;
-                                    if ($i == 1) {
-                                        ?>
-                                        <div class="row">
-                                            <?php
-                                        }
-                                        ?>
+                                <div class="row">
+                                    <?php
+                                      foreach ($course as $key => $valuecourse) {
+                                          ?>
                                         <div class="col-xs-3">
                                             <div class="box-activity">
                                                 <div class="box-imag">
-                                                    <img src="<?= Yii::app()->baseUrl; ?>/images/uploads/<?= $valuecourse->image ?>"> 
+                                                    <img src="<?= Yii::app()->baseUrl; ?>/images/uploads/course/<?= $valuecourse->image ?>"> 
                                                 </div>
                                                 <div class="box-desc">
                                                     <div class="box-desc-activity">
@@ -68,83 +62,54 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <?php
-                                        if ($i == 4) {
-                                            if ($i != 1) {
-                                                $i = 0;
-                                            }
-                                            ?>
-                                        </div>
-                                        <?php
-                                    }
-                                }
-                                ?>
-                            </div><!--ปิดตอนท้ายสุดของ <div class="row">-->
+                                       <?php
+                                      }
+                                    ?> 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-xs-3">
+ <div style="height: 433px;
+background: #A6A6A6;
+padding: 5px;
+border: 1px solid #9D99A3;
+border-bottom-right-radius: 4px;
+border-bottom-left-radius: 4px;">
+                     <div id="login-container">
+                        <div class="login">
+                            <h5>LOGIN</h5>
+                            <?php
+                            $formlogin = $this->beginWidget('CActiveForm', [
+                                'id' => 'login-form',
+                                'action' => Yii::app()->createUrl('main/index'),
+                                'enableAjaxValidation' => true,
+                                'htmlOptions' => [
+                                    //  'class' => 'form-horizontal',
+                                    'role' => 'form',
+                                    "style" => "text-align:center;",
+                                ],
+                            ]);
+                            ?>
+                            <?php
+                            if ($msg != null) {
+                                ?>
+                                <div class="alert alert-danger">
+                                    <?= $formlogin->errorSummary($modelLoginForm, null, null, [ 'class' => 'alert alert-danger']); ?>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                            <?= $formlogin->textField($modelLoginForm, 'username', [ 'class' => 'myinput', 'placeholder' => $modelLoginForm->getAttributeLabel('username')]); ?>
+                            <?= $formlogin->passwordField($modelLoginForm, 'password', [ 'class' => 'myinput', 'placeholder' => $modelLoginForm->getAttributeLabel('password')]); ?> 
+                            <?= CHtml::submitButton('Login', [ 'class' => 'btn btn-primary']); ?>
+                            <?php $this->endWidget(); ?>   
+                        </div>
+                    </div>
+                    </div>
+                </div> 
             </div>
-            <div class="col-xs-3">
-                <div id="login-container">
-                    <div class="login">
-                        <h5>LOGIN</h5>
-                        <?php
-                        $formlogin = $this->beginWidget('CActiveForm', [
-                            'id' => 'login-form',
-                            'action' => Yii::app()->createUrl('main/index'),
-                            'enableAjaxValidation' => true,
-                            'htmlOptions' => [
-                                //  'class' => 'form-horizontal',
-                                'role' => 'form',
-                                "style" => "text-align:center;",
-                            ],
-                        ]);
-                        ?>
-                        <?php
-                         if($msg!=null){
-                           ?>
-                         <div class="alert alert-danger">
-                             <?= $msg; ?>
-                            </div>
-                         <?php
-                         }
-                        ?>
-                        <?= $formlogin->textField($modelLoginForm, 'username', [ 'class' => 'myinput', 'placeholder' => $modelLoginForm->getAttributeLabel('username')]); ?>
-                        <?= $formlogin->passwordField($modelLoginForm, 'password', [ 'class' => 'myinput', 'placeholder' => $modelLoginForm->getAttributeLabel('password')]); ?> 
-                        <?= CHtml::submitButton('Login', [ 'class' => 'btn btn-primary']); ?>
-                        <?php $this->endWidget(); ?>   
-                    </div>
-                </div>
-                <div id="reg-container">
-                    <div class="register">
-                        <h5>REGISTER</h5>
-                        <?php
-                        $form = $this->beginWidget('CActiveForm', [
-                            'id' => 'register-form',
-                            'action' => Yii::app()->createUrl('main/index'),
-                            'enableAjaxValidation' => true,
-                            'htmlOptions' => [
-                                //  'class' => 'form-horizontal',
-                                'role' => 'form',
-                                "style" => "text-align:center;",
-                            ],
-                        ]);
-                        ?>
-                        <?= $form->errorSummary($modelRegister, null, null, [ 'class' => 'alert alert-danger']); ?>
-                        <?php if (Yii::app()->user->hasFlash('success')): ?>
-                            <div class="alert alert-success">
-                                <?= Yii::app()->user->getFlash('success'); ?>
-                            </div>
-                        <?php endif; ?>
-                        <?= $form->textField($modelRegister, 'idemployee', [ 'class' => 'myinput', 'placeholder' => $modelRegister->getAttributeLabel('idemployee')]); ?>
-                        <?= $form->textField($modelRegister, 'username', [ 'class' => 'myinput', 'placeholder' => $modelRegister->getAttributeLabel('username')]); ?>
-                        <?= $form->passwordField($modelRegister, 'password', [ 'class' => 'myinput', 'placeholder' => $modelRegister->getAttributeLabel('password')]); ?>                      
-                        <?= CHtml::submitButton('register', [ 'class' => 'btn btn-primary']); ?>
-                        <?php $this->endWidget(); ?>    
-                    </div>
-                </div>
-            </div> 
         </div>
-    </div>
-</div>	
-
+    </div>	
+</div><!-- /.container --> 

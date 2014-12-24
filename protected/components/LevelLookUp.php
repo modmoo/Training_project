@@ -1,8 +1,8 @@
 <?php
 class LevelLookUp{
-  const ADMIN  = 1;
-  const EMPLOYEE= 2;
-  const STUDENT = 3;
+  const ADMINISTRATOR  = 1;
+  const LEADER= 2;
+  const EMPLOYEE = 3;
   const GUESTS = 4; // ในฐานข้อมูลห้ามเก็บด้วยเลขศูนย์
 
       // For CGridView, CListView Purposes
@@ -24,8 +24,8 @@ class LevelLookUp{
       public static function getLevelList(){
           return array(
                  self::ADMIN=>'Administrator',
-                 self::COMPANY=>'EMPLOYEE',
-                 self::MEMBER=>'STUDENT',
+                 self::COMPANY=>'LEADER',
+                 self::MEMBER=>'EMPLOYEE',
                  self::GUESTS=>'GUESTS');
     }
 }

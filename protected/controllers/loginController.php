@@ -82,8 +82,8 @@ class loginController extends Controller {
             //$puser=$model->password;
             // $model->password=md5($salt.$puser);
             if ($model->validate() && $model->login()){
-                 if(Yii::app()->user->name==1){
-                  $this->redirect(Yii::app()->user->returnUrl);   
+                 if(Yii::app()->user->name==1 ||Yii::app()->user->name==2){
+                   $this->redirect(Yii::app()->user->returnUrl);   
                  } else{
                 // $this->redirect(Yii::app()->homeUrl); 
                 $this->redirect(array('newcourse/index'));

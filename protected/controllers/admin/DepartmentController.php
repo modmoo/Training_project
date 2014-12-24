@@ -59,42 +59,48 @@ $this->render('view',array(
 * Creates a new model.
 * If creation is successful, the browser will be redirected to the 'view' page.
 */
-public function actionCreate()
-{
+public function actionCreate(){
 $model=new Department;
-
-// Uncomment the following line if AJAX validation is needed
 // $this->performAjaxValidation($model);
-
 if(isset($_POST['Department']))
 {
 $model->attributes=$_POST['Department'];
-if($model->save())
-$this->redirect(array('view','id'=>$model->id));
+if($model->save()){
+     echo '<script language="javascript">';
+     echo "alert('บันทึกข้อมูลเรียบร้อยแล้วค่ะ');";
+     echo '</script>';
+ Msg::success( 'บันทึกข้อมูลเรียบร้อยแล้วค่ะ');
+ Yii::app()->user->setFlash("success", "บันทึกข้อมูลเรียบร้อยแล้วค่ะ");       
+$this->redirect(array('admin'));
+
+}else{
+  Msg::error( $model->getErrors());
+  Yii::app()->user->setFlash("error", "ไม่สามารถบันทึกข้อมูลได้ค่ะ");  	
+}
 }
 
 $this->render('create',array(
 'model'=>$model,
 ));
 }
-
-/**
-* Updates a particular model.
-* If update is successful, the browser will be redirected to the 'view' page.
-* @param integer $id the ID of the model to be updated
-*/
 public function actionUpdate($id)
 {
 $model=$this->loadModel($id);
-
-// Uncomment the following line if AJAX validation is needed
 // $this->performAjaxValidation($model);
 
-if(isset($_POST['Department']))
-{
+if(isset($_POST['Department'])){
 $model->attributes=$_POST['Department'];
-if($model->save())
-$this->redirect(array('view','id'=>$model->id));
+if($model->save()){
+     echo '<script language="javascript">';
+     echo "alert('บันทึกข้อมูลเรียบร้อยแล้วค่ะ');";
+     echo '</script>';
+ Msg::success( 'บันทึกข้อมูลเรียบร้อยแล้วค่ะ');    
+$this->redirect(array('admin'));	
+}else{
+  Msg::error( $model->getErrors());
+  Yii::app()->user->setFlash("error", "ไม่สามารถบันทึกข้อมูลได้ค่ะ");  	
+}
+
 }
 
 $this->render('update',array(

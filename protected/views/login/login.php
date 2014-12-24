@@ -28,8 +28,8 @@
         </div>
         <div class="footer">                                                               
             <?php echo CHtml::submitButton('Sign me in', array('class' => 'btn bg-olive btn-block')); ?>
-            <p><a href="#">I forgot my password</a></p>
-            <a href="#" class="text-center">Register a new membership</a>
+        <!--    <p><a href="#">I forgot my password</a></p>
+            <a href="#" class="text-center">Register a new membership</a> -->
         </div>
         <?php $this->endWidget(); ?>
     </div><!-- form -->
