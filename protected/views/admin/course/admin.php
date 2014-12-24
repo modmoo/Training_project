@@ -18,7 +18,7 @@ return false;
 }
 </style>
 <div class="well">
- <h3>จัดการหลักสูตรเรียน</h3>
+ <h3>รายการหลักสูตร</h3>
 <?php // echo CHtml::link('Advanced Search', '#', array('class' => 'search-button btn btn-primary')); ?>
 <div class="search-form" style="display:none">
     <?php

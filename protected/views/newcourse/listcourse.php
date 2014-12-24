@@ -22,13 +22,13 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th style="background:#5F9CCA; color:#fff">ลำดับที่</th>
-                                    <th style="background:#5F9CCA; color:#fff">รหัสหลักสูตร</th>
-                                    <th style="background:#5F9CCA; color:#fff">ชื่อหลักสูตร</th>
-                                    <th style="background:#5F9CCA; color:#fff">วันเปิดรับสมัคร</th>
-                                    <th style="background:#5F9CCA; color:#fff">วันปิดรับสมัคร</th>
-                                    <th style="background:#5F9CCA; color:#fff">สมัคร/คงเหลือ</th>
-                                    <th style="background:#5F9CCA; color:#fff">สถานะ</th>
+                                    <th style="background:#5F9CCA; color:#fff; width:50px;">ลำดับที่</th>
+                                    <th style="background:#5F9CCA; color:#fff; width:150px;">รหัสหลักสูตร</th>
+                                    <th style="background:#5F9CCA; color:#fff; width:250px;">ชื่อหลักสูตร</th>
+                                    <th style="background:#5F9CCA; color:#fff; width:100px;">วันเปิดรับสมัคร</th>
+                                    <th style="background:#5F9CCA; color:#fff; width:100px;">วันปิดรับสมัคร</th>
+                                    <th style="background:#5F9CCA; color:#fff; width:100px;">สมัคร/คงเหลือ</th>
+                                    <th style="background:#5F9CCA; color:#fff; width:100px;">สถานะ</th>
 
                                 </tr>
                             </thead>

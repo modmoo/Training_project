@@ -27,18 +27,18 @@
                 <img src="<?= Yii::app()->baseUrl; ?>/images/uploads/course/<?= $course->image ?>">
             </div>
             <div id='profile'>
-                <div class="h_profiles"><h3>Approval</h3><br>การอนุมัติเข้าฝึกอบรม</br></div>
+                <div class="h_profiles"><h3>รายชื่อผู้ร้องขอเข้าอบรม</h3></div>
                 <div style="margin-left:5px;">
                     <div class="row clearfix">
                         <div class="col-xs-12 column">
                             <table class="table table-striped">
                                 <tbody>
                                     <tr>
-                                        <td width="200">
-                                            <a href="#"> Course ID: &nbsp;<?= $course->cu_id ?></a> 
+                                        <td width="300">
+                                            <a href="#"> รหัสหลักสูตร: &nbsp;<?= $course->cu_id ?></a> 
                                         </td>
                                         <td>
-                                            Course Name :&nbsp;<?= $course->name ?>
+                                            ชื่อหลักสูตร :&nbsp;<?= $course->name ?>
                                         </td>
                                         <td></td>
                                     </tr>

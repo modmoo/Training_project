@@ -90,24 +90,24 @@ $cs->registerCssFile($baseUrl . '/front/sweetalert/sweet-alert.css');
                 <img src="<?= Yii::app()->baseUrl; ?>/images/uploads/course/<?= $course->image ?>">
             </div>
             <div id='profile'>
-                <div class="h_profiles"><h3>เพิ่มผู้เรียน</h3><br>การเพิ่มผู้เรียน</br></div>
+                <div class="h_profiles"><h3>เพิ่มผู้เรียน</h3></div>
                 <div style="margin-left:5px;">
                     <div class="row clearfix">
                         <div class="col-xs-12 column">
                             <table class="table table-striped">
                                 <tbody>
                                     <tr>
-                                        <td width="200">
-                                            <a href="#"> Course ID: &nbsp;<?= $course->cu_id ?></a> 
+                                        <td width="300">
+                                            <a href="<?= Yii::app()->createUrl('course_detail&id=').$course->cu_id;?> "> รหัสหลักสูตร: &nbsp;<?= $course->cu_id ?></a> 
                                         </td>
                                         <td>
-                                            Course Name :&nbsp;<?= $course->name ?>
+                                            ชื่อหลักสูตร :&nbsp;<?= $course->name ?>
                                         </td>
                                         <td></td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            สิ้นสุดการสมัครเมื่อ :&nbsp;<?= $course->dayend ?>
+                                            อบรมวันที่ :&nbsp;<?= $course->dayend ?>
                                         </td>
                                         <td>
                                             ต้องการจำนวนผู้สมัคร :&nbsp;<?= $requestcourse['num']; ?>&nbsp;คน

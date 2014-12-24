@@ -24,7 +24,7 @@ return false;
 )); ?>
 <div style="margin-bottom:-46px;;" class="well">
 <?php
-echo '<h3>จัดการบริษัทรับจัดอบรม</h3>'; 
+echo '<h3>รายชื่อบริษัท / วิทยากรอิสระ</h3>'; 
 echo CHtml::ajaxSubmitButton(
     $label = 'ลบข้อมูล', 
     array('admin/supprier/Ajaxupdate'), array('success' => 'reloadGrid'),

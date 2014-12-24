@@ -27,7 +27,7 @@ return false;
 )); ?>
 <div style="margin-bottom:-46px;;" class="well">
 <?php
-echo '<h3>จัดการแผนก</h3>'; 
+echo '<h3>รายชื่อแผนก</h3>'; 
 echo CHtml::ajaxSubmitButton(
     $label = 'ลบข้อมูล', 
     array('admin/company/Ajaxupdate'), array('success' => 'reloadGrid'),

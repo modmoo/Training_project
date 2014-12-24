@@ -21,11 +21,11 @@ $form = $this->beginWidget('booster.widgets.TbActiveForm', array(
     <?php
      if($mytrue){
        ?>
-    <legend class="mylegend"><i class="glyphicon glyphicon-plus"></i>เพิ่มบริษัทรับจัดอบรม</legend>
+    <legend class="mylegend"><i class="glyphicon glyphicon-plus"></i>เพิ่มข้อมูลบริษัท / วิทยากร</legend>
      <?php  
      }else{
        ?>
-       <legend class="mylegend"><i class="glyphicon glyphicon-pencil"></i>แก้ไขบริษัทรับจัดอบรม&nbsp;<?=$model->name?></legend>    
+       <legend class="mylegend"><i class="glyphicon glyphicon-pencil"></i>แก้ไขข้อมูลบริษัท / วิทยากร&nbsp;<?=$model->name?></legend>    
      <?php  
      }
     ?>

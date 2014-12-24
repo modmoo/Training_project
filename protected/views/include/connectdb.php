@@ -1,6 +1,6 @@
 <?php
 $username = "root";
-$password = "admin";
+$password = "";
 $hostname = "localhost"; 
 //connection to the database
 $dbhandle = mysql_connect($hostname, $username, $password) or die(mysql_error());

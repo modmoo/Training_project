@@ -69,7 +69,7 @@ return array(
             'connectionString' => 'mysql:host=localhost;dbname=training_db',
             'emulatePrepare' => true,
             'username' => 'root',
-            'password' => 'admin',
+            'password' => '',
             'charset' => 'utf8',
             'initSQLs' => array("SET time_zone = '+7:00'"),
         ),

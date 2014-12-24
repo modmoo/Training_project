@@ -308,7 +308,7 @@ $form = $this->beginWidget('booster.widgets.TbActiveForm', array(
      <?php  
      }else{
        ?>
-       <legend class="mylegend"><i class="glyphicon glyphicon-pencil"></i>แก้ไขหลักสูตรเรียนหรัส&nbsp;<?=$model->cu_id?></legend>    
+       <legend class="mylegend"><i class="glyphicon glyphicon-pencil"></i>แก้ไขหลักสูตรเรียนรหัสส&nbsp;<?=$model->cu_id?></legend>    
      <?php  
      }
     ?>

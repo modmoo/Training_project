@@ -96,7 +96,7 @@ echo CHtml::ajaxSubmitButton(
         ),
          array(
           //'name' => 'employee.idemployee',
-          'header' => 'วันสิ้นสุดหลักสูตร',  
+          'header' => 'วันที่อบรมหลักสูตร',  
           'value' => 'Daycoursetraining::getlastcourse($data->course_id)',
         ),
        array(

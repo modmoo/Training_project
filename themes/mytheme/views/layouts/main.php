@@ -71,17 +71,17 @@
                         'items' => array(
                             //   array('label' => 'Home', 'icon' => 'home', 'url' => array('/admin/mainadmin')),
                             // array('label' => '?????????????', 'url' => 'employee/admin', 'icon' => 'fa fa-th', 'bage' => '<small class="badge pull-right bg-yellow">12</small>'),
-                            array('label' => 'จัดการหลักสูตรเรียน', 'url' => '#', 'icon' => 'fa fa-laptop', 'items' => array(
-                                    array('label' => 'จัดการหลักสูตรเรียน', 'url' => array('admin/course/admin'), 'visible' => Yii::app()->user->isAdmin()),
+                            array('label' => 'จัดการข้อมูลหลักสูตร', 'url' => '#', 'icon' => 'fa fa-laptop', 'items' => array(
+                                    array('label' => 'รายการหลักสูตร', 'url' => array('admin/course/admin'), 'visible' => Yii::app()->user->isAdmin()),
                                     array('label' => 'เพิ่มหลักสูตรเรียน', 'url' => array('admin/course/create'), 'visible' => Yii::app()->user->isAdmin()),
-                                    array('label' => 'หลักสูตรเรียนรอการอณุมัติ', 'url' => array('admin/approval'), 'visible' => Yii::app()->user->isLEADER()),
+                                    array('label' => 'หลักสูตรเรียนรอการอนุมัติ', 'url' => array('admin/approval'), 'visible' => Yii::app()->user->isLEADER()),
                                     array('label' => 'คำร้องขอเพิ่มผู้เข้าอบรม', 'url' => array('admin/approval/requestusers'), 'visible' => Yii::app()->user->isLEADER()),
                                     //   array('label' => 'หลักสูตรคงค้าง', 'url' => array('admin/checkCourse/listcourseapproval'),'visible' =>Yii::app ()->user->isAdmin()),
                                     array('label' => 'บันทึกประวัติผู้เรียน', 'url' => array('admin/savehistory/admin'), 'visible' => Yii::app()->user->isAdmin()),
                                 )), //,'visible' =>Yii::app ()->user->isAdmin()
                             array('label' => 'พนักงาน', 'icon' => 'fa fa-laptop', 'items', 'url' => array('Leader/employee/admin'), 'visible' => Yii::app()->user->isLEADER()),
-                            array('label' => 'จัดการพนักงาน', 'url' => '#', 'icon' => 'fa fa-laptop', 'items' => array(
-                                    array('label' => 'จัดการพนักงาน', 'url' => array('admin/employee/admin'), 'visible' => Yii::app()->user->isAdmin()),
+                            array('label' => 'จัดการข้อมูลพนักงาน', 'url' => '#', 'icon' => 'fa fa-laptop', 'items' => array(
+                                    array('label' => 'รายชื่อพนักงาน', 'url' => array('admin/employee/admin'), 'visible' => Yii::app()->user->isAdmin()),
                                     //  array('label' => 'พนักงาน', 'url' => array('admin/employee/admin'),'visible' =>Yii::app ()->user->isLEADER()),
                                     array('label' => 'เพิ่มพนักงาน', 'url' => array('admin/employee/create'), 'visible' => Yii::app()->user->isAdmin()),
                                 //  array('label' => 'จัดการแผนก', 'url' => array('admin/department/admin'),'visible' =>Yii::app ()->user->isAdmin()),
@@ -91,23 +91,23 @@
                               array('label' => 'จัดข้อมูลบริษัท', 'url' => array('admin/company/admin')),
                               array('label' => 'เพิ่มบริษัท', 'url' => array('admin/company/create')),
                               ),'visible' =>Yii::app ()->user->isAdmin()), */
-                            array('label' => 'จัดการแผนก', 'url' => '#', 'icon' => 'fa fa-laptop', 'items' => array(
-                                    array('label' => 'จัดการแผนก', 'url' => array('admin/department/admin')),
+                            array('label' => 'จัดการข้อมูลแผนก', 'url' => '#', 'icon' => 'fa fa-laptop', 'items' => array(
+                                    array('label' => 'รายชื่อแผนก', 'url' => array('admin/department/admin')),
                                     array('label' => 'เพิ่มแผนก', 'url' => array('admin/department/create')),
                                 ), 'visible' => Yii::app()->user->isAdmin()),
-                            array('label' => 'บริษัทรับจัดอบรม', 'url' => '#', 'icon' => 'fa fa-laptop', 'items' => array(
-                                    array('label' => 'จัดการบริษัทรับจัดอบรม', 'url' => array('admin/supprier/admin')),
-                                    array('label' => 'เพิ่มบริษัทรับจัดอบรม', 'url' => array('admin/supprier/create')),
+                            array('label' => 'จัดการบริษัท/วิทยากร ', 'url' => '#', 'icon' => 'fa fa-laptop', 'items' => array(
+                                    array('label' => 'รายชื่อบริษัท/วิทยากร', 'url' => array('admin/supprier/admin')),
+                                    array('label' => 'เพิ่มรายชื่อบริษัท/วิทยากร', 'url' => array('admin/supprier/create')),
                                 ), 'visible' => Yii::app()->user->isAdmin()),
-                            array('label' => 'ข้อมูลผู้ติดต่อ', 'url' => array('admin/contactus/admin'), 'icon' => 'fa fa-laptop', 'visible' => Yii::app()->user->isAdmin()),
+                           /* array('label' => 'ข้อมูลผู้ติดต่อ', 'url' => array('admin/contactus/admin'), 'icon' => 'fa fa-laptop', 'visible' => Yii::app()->user->isAdmin()),*/
                             array('label' => 'รายงานระบบ', 'url' => '#', 'icon' => 'fa fa-laptop', 'items' => array(
                                     ///  array('label' => 'ข้อมูลการอณุมัติหลักสูตร', 'url' => array('#'),'visible' =>Yii::app ()->user->isLEADER()),
-                                    array('label' => 'รายชื่อผู้อบรม', 'url' => array('admin/employee/Exportpdf'), 'visible' => Yii::app()->user->isLEADER()),
-                                    array('label' => 'ประวัติ หลักสูตร', 'url' => array('admin/trainingCompleted'), 'visible' => Yii::app()->user->isAdmin()),
-                                    array('label' => 'รายชื่อผู้เข้าอบรม', 'url' => array('admin/result_registerlist'), 'visible' => Yii::app()->user->isAdmin()),
-                                    array('label' => 'สรุปรายปี', 'url' => array('admin/chartreport'), 'visible' => Yii::app()->user->isAdmin()),
-                                    array('label' => 'สรุปหลักสูตร', 'url' => array('admin/report2'), 'visible' => Yii::app()->user->isAdmin()),
-                                    array('label' => 'กราฟส4', 'url' => array('admin/report3'), 'visible' => Yii::app()->user->isAdmin())
+                                    //array('label' => 'รายชื่อผู้อบรม', 'url' => array('admin/employee/Exportpdf'), 'visible' => Yii::app()->user->isLEADER()),
+                                    //array('label' => 'ประวัติ หลักสูตร', 'url' => array('admin/trainingCompleted'), 'visible' => Yii::app()->user->isAdmin()),
+                                    //array('label' => 'รายชื่อผู้เข้าอบรม', 'url' => array('admin/result_registerlist'), 'visible' => Yii::app()->user->isAdmin()),
+                                    array('label' => 'สรุปหลักสูตรรายเดือน', 'url' => array('admin/chartreport'), 'visible' => Yii::app()->user->isAdmin()),
+                                    array('label' => 'สรุปหลักสูตรแต่ละประเภท', 'url' => array('admin/report2'), 'visible' => Yii::app()->user->isAdmin()),
+                                    array('label' => 'สรุปรายงานผลการออบรม', 'url' => array('admin/report3'), 'visible' => Yii::app()->user->isAdmin())
                                 )),
                         //    array('label' => 'Settings', 'url' => '#', 'icon' => 'fa fa-wrench'),
                         //  array('label' => 'Help', 'url' => '#', 'icon' => 'fa fa-file-text'),

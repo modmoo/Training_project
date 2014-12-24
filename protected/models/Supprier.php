@@ -27,8 +27,8 @@ class Supprier extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'id' => 'ID',
-            'idsuppier' => 'รหัส supprier',
-            'name' => 'ชื่อบริษัท/หน่วยงาน',
+            'idsuppier' => 'รหัสบริษัท/วิทยากร',
+            'name' => 'ชื่อบริษัท/วิทยากร',
             'image' => 'รูป',
             'tel' => 'เบอร์โทร',
             'email' => 'อีเมลล์',
